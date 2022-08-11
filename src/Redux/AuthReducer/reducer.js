@@ -22,14 +22,14 @@ const reducer = (state = initialState,action) => {
         ...state,
         token:payload,
         isAuth:true,
-        isLoading:true,
+        isLoading:false,
         isError:false,
       }
       case types.LOGIN_FAILURE:
       return{
         ...state,
-        isLoading:true,
-        isError:false,
+        isLoading:false,
+        isError:true,
         isAuth:false,
         token:'',
       }

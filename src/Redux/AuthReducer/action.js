@@ -4,11 +4,16 @@ import axios from 'axios';
 
 const login = (payload)=>(dispatch)=>{
     dispatch({type:types.LOGIN_REQUEST})
-    return axios.post("https://reqres.in/api/login",payload)
-    .then((r)=>{
-        dispatch({type:types.LOGIN_SUCCESS,payload:r.data.token})
+    return axios({
+        method:'post',
+        url:'/api/login',
+        baseURL:"https://reqres.in",
+        data:payload
     })
-    .catch((e)=>({type:types.LOGIN_FAILURE}))
+    .then((r)=>{
+       return dispatch({type:types.LOGIN_SUCCESS,payload:r.data.token})
+    })
+    .catch((e)=>dispatch({type:types.LOGIN_FAILURE}))
 }
 
 export {login};
