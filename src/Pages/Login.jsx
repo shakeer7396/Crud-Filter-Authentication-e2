@@ -35,14 +35,14 @@ if(email && password){
         <div>
           <label>User Email</label>
           <br />
-          <input data-testid="login-email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)} />
+          <input  placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)} />
         </div>
         <div>
           <label>User Password</label>
           <br />
-          <input data-testid="login-password" placeholder="Enter Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+          <input  placeholder="Enter Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
         </div>
-        <button type="submit" data-testid="login-submit">
+        <button type="submit" >
           Loading
         </button>
       </form>

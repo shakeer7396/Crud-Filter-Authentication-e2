@@ -38,7 +38,7 @@ console.log(category);
     <div>
       <h3>Filters</h3>
       <div>Category</div>
-      <div data-testid="filter-category">
+      <div >
         <div>
           <input type="checkbox" value="Analog" onChange={handleCheckbox} defaultChecked={category.includes('Analog')} />
           <label>Analog</label>
